@@ -1,0 +1,8 @@
+{%- assign numstars = include.value | at_least: 1 | at_most: 5 | default: 1 -%}
+{% for i in (1..5) %}
+	{% if i <= numstars %}
+		<i class="material-icons">star</i>
+	{% else %}
+		<i class="material-icons">star_border</i>
+	{% endif %}
+{% endfor %}

@@ -1,0 +1,11 @@
+- lang-ref: "wago-howto-theme"
+- lang-ref: "markdown"
+- lang-ref: "includes"
+  toc:
+    - lang-ref: "includes_howtoinfo"
+    - lang-ref: "includes_info"
+    - lang-ref: "includes_warning"
+    - lang-ref: "includes_warning-damage"
+    - lang-ref: "includes_warning-electricity"
+    - lang-ref: "includes_warning-esd"
+- lang-ref: "links"

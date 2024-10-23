@@ -1,0 +1,16 @@
+{%- assign default_paths = site.pages | map: "path" -%}
+{%- assign page_paths = site.header_pages | default: default_paths -%}
+{%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
+
+<nav class="navbar navbar-light sticky-top bg-light">
+	<div class="container">
+		<a class="navbar-brand" href="{{ '/' | relative_url }}"><img src="{{ '/assets/images/wago.png' | relative_url }}" alt="WAGO" /></a>
+		{% if site.data.toc %}
+		<button id="sidebarToggle" class="navbar-toggler" type="button">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		{% else %}
+		<span class="navbar-text mx-auto h2">{{ site.title }}</span>
+		{% endif %}
+	</div>
+</nav>

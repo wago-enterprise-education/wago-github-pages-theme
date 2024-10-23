@@ -1,2 +1,3 @@
-# wago-github-pages-theme
-This is a basic theme for HowTos provided by WAGO on Github.
+# wago-howto-theme
+
+See [here](https://pages.svgithub01001.wago.local/education/wago_howto_theme/)...

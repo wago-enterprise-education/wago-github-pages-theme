@@ -1,0 +1,262 @@
+body {
+  background: $background-color;
+  //margin-top: 62px;
+  margin-bottom: 40px;
+}
+
+hr {
+  margin: 1em 0;
+}
+
+a.navbar-brand {
+  padding: 0;
+}
+
+a.navbar-brand > img {
+  width: 125px;
+}
+
+.bg-light {
+  background-color: $white !important;
+  border-bottom: $grey-color-light 1px solid;
+}
+
+footer.footer {
+  background-color: $grey-color-light !important;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+}
+
+a.dropdown-item.level2 {
+  padding: .25rem 2rem;
+}
+
+.card {
+  margin: 0 1rem 1rem 1rem;
+}
+
+.card-header {
+  border-bottom: none;
+}
+
+.card > ul {
+  margin: 0;
+}
+
+.card > ul > li > p {
+  margin-left: 1rem;  
+}
+
+div#content {
+  padding: 2rem;
+}
+
+.fixed-top {
+  width: 100vw;
+}
+
+/* Side Menu */
+.wrapper {
+}
+
+#sidebar {
+  margin-left: 0px;
+  min-width: 300px;
+  max-width: 300px;
+  min-height: 100%;
+  background: white;
+  border-right: $grey-color-light 1px solid;
+  transition: all 0.3s;
+  padding: 15px;
+}
+
+#sidebar.active {
+  margin-left: -300px;
+  min-width: 300px;
+  max-width: 300px;
+  min-height: 100%;
+  background: white;
+  border-right: $grey-color-light 1px solid;
+  transition: all 0.3s;
+  padding: 15px;
+}
+
+#sidebar ul {
+  display: block;
+  list-style-type: none;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 5px;
+  padding-inline-start: 15px;
+}
+
+#sidebar ul li.level2 {
+  padding-inline-start: 15px;
+}
+
+.sidebar-wrapper {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+
+.sidebar-nav {
+  list-style: none;
+}
+
+.sidebar-nav li.sidebar-nav-item a {
+  display: block;
+  text-decoration: none;
+}
+
+.sidebar-nav li a:hover {
+  text-decoration: none;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+  font-size: 1.2rem;
+  height: 80px;
+  line-height: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+  background: none;
+}
+
+#sidebar-wrapper.active {
+//  width: 300px;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.menu-toggle {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  z-index: 999;
+}
+
+.menu-toggle:focus, .menu-toggle:hover {
+}
+
+.menu-toggle:hover {
+}
+
+/**
+ * Optional class to center images as figures
+ */
+img.figure {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/**
+ * Alert block formatting
+ */
+.info {
+  padding: .5rem 1.25rem .75rem 5rem;
+  margin: 0 auto 1rem auto;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  color: #0c5460;
+  border-color: #bee5eb;
+  min-height: 61px;
+  background: #d1ecf1 url("../images/info.png") -0.75rem .75rem no-repeat;
+}
+
+div.info {
+  padding-bottom: 0;
+}
+
+.note {
+  padding: .5rem 1.25rem .75rem 5rem;
+  margin: 0 auto 1rem auto;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  color: #0c5460;
+  border-color: #bee5eb;
+  min-height: 61px;
+  background: #d1ecf1 url("../images/note.png") -0.75rem .75rem no-repeat;
+}
+
+div.note {
+  padding-bottom: 0;
+}
+
+.warning {
+  padding: .5rem 1.25rem .75rem 5rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  color: #856404;
+  border-color: #ffeeba;
+  min-height: 61px;
+  background: #fff3cd url("../images/warning.png") -0.75rem .75rem no-repeat;
+}
+
+div.warning {
+  padding-bottom: 0;
+}
+
+.warning-damage {
+  padding: .5rem 1.25rem .75rem 5rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  color: #856404;
+  border-color: #ffeeba;
+  min-height: 61px;
+  background: #fff3cd url("../images/warning-damage.png") -0.75rem .75rem no-repeat;
+}
+
+div.warning-damage {
+  padding-bottom: 0;
+}
+
+.warning-electricity {
+  padding: .5rem 1.25rem .75rem 5rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  color: #856404;
+  border-color: #ffeeba;
+  min-height: 61px;
+  background: #fff3cd url("../images/warning-electricity.png") -0.75rem .75rem no-repeat;
+}
+
+div.warning-electricity {
+  padding-bottom: 0;
+}
+
+.warning-esd {
+  padding: .5rem 1.25rem .75rem 5rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  color: #856404;
+  border-color: #ffeeba;
+  min-height: 61px;
+  background: #fff3cd url("../images/warning-esd.png") -0.75rem .75rem no-repeat;
+}
+
+div.warning-esd {
+  padding-bottom: 0;
+}

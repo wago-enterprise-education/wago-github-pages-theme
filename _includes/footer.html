@@ -1,0 +1,20 @@
+<footer class="footer mt-auto">
+	<div class="container">
+		<nav class="nav">
+
+			{%- assign impressum = site.pages | where: 'title', 'Impressum' | first -%}
+			{% if impressum.path %}
+			<a class="nav-link" href="{{ impressum.url | relative_url }}">
+				Impressum
+			</a>
+			{% endif %}
+
+			{% assign languages=site.pages | where:"lang-ref", page.lang-ref | sort: 'lang' %}
+			{% if languages.size > 0 %}
+				{% for language in languages %}
+					<a class="nav-link" href="{{ language.url | relative_url }}">{{ site.data.languages[language.lang].icon }} {{ site.data.languages[language.lang].label}}</a>
+				{% endfor %}
+			{% endif %}
+		</nav>
+	</div>
+</footer>

@@ -1,0 +1,79 @@
+{%- assign default_paths = site.pages | map: "path" -%}
+{%- assign page_paths = site.header_pages | default: default_paths -%}
+{%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
+
+<nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+	<div class="container">
+		<a class="navbar-brand" href="{% link index.md %}"><img src="{{ '/assets/images/wago.png' | relative_url }}" alt="WAGO" /></a>
+
+		<div class="collapse navbar-collapse" id="navbarCollapse">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Inhaltsverzeichnis
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						{% for entry in site.data.toc %}
+							{%- assign current_page = site.pages | where: "path", entry.path | first -%}
+							{% if entry.toc[0] %}
+							<a class="dropdown-item" href="{{ current_page.url | relative_url }}">{{ current_page.title }}</a>
+							{% for entry2 in entry.toc %}
+								{%- assign current_page2 = site.pages | where: "path", entry2.path | first -%}
+								<a class="dropdown-item level2" href="{{ current_page2.url | relative_url }}">{{ current_page2.title }}</a>
+							{% endfor %}
+							{% else %}
+							<a class="dropdown-item" href="{{ current_page.url | relative_url }}">{{ current_page.title }}</a>
+							{% endif %}
+						{% endfor %}
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#prev">
+						Vorherige
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#next">
+						Nächste
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		{% comment %}
+			<form class="form-inline mt-2 mt-md-0">
+				<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			</form>
+			{%- for path in page_paths -%}
+			{%- assign my_page = site.pages | where: "path", path | first -%}
+			{%- if my_page.title -%}
+			<li class="nav-item active">
+				<a class="nav-link" href="{{ my_page.url | relative_url }}">
+					{{ my_page.title | escape }} 
+					<span class="sr-only">(current)</span>
+				</a>
+			</li>
+			{%- endif -%}
+			{%- endfor -%}
+		{% endcomment %}
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+	</div>
+</nav>
+<!--<div class="jumbotron">
+    {%- assign default_paths = site.pages | map: "path" -%}
+    {%- assign page_paths = site.header_pages | default: default_paths -%}
+    {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
+	<h1 class="display-3">{{ site.title }}</h1>
+	<p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+	<hr class="m-y-md">
+	<p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+	<p class="lead">
+		<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+	</p>
+</div>
+-->

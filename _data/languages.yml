@@ -1,0 +1,8 @@
+de:
+  label: Deutsch
+  toc-label: Inhaltsverzeichnis
+  icon: ":de:"
+en:
+  label: English
+  toc-label: Contents
+  icon: ":us:"

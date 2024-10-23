@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+// Define defaults for each variable.
+
+$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$base-font-size:   16px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+
+$spacing-unit:     30px !default;
+
+$grey-0:           #e0ddd9 !default;
+$grey-1:           #cdcac6 !default;
+$grey-2:           #afadaa !default;
+$grey-3:           #848380 !default;
+$grey-4:           #1F2837 !default;
+$grey-color:       $grey-2 !default;
+$grey-color-light: $grey-0 !default;
+$grey-color-dark:  $grey-4 !default;
+$orange-color:     #f66a0a !default;
+$brand-color:      #6ec800 !default;
+$white:            #ffffff !default;
+$text-color:       #111 !default;
+$background-color: $white !default;
+
+$table-text-align: left !default;
+
+// Width of the content area
+$content-width:    800px !default;
+
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
+
+$on-medium:        $on-palm !default;
+$on-large:         $on-laptop !default;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+// Notice the following mixin uses max-width, in a deprecated, desktop-first
+// approach, whereas media queries used elsewhere now use min-width.
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+// Import partials.
+@import
+  "wago/base",
+  //"wago/layout",
+  //"wago/syntax-highlighting",
+  "wago/bootstrap-modifier"
+;

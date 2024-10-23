@@ -1,0 +1,21 @@
+{% if site.data.toc %}
+<!-- Sidebar width TOC -->
+<nav id="sidebar" class="active">
+	<div class="sidebar-header">
+		<h3>{{ site.data.languages[page.lang].toc-label }}</h3>
+	</div>
+
+	<ul class="sidebar-nav">
+		{% for entry in site.data.toc %}
+		{%- assign current_page = site.pages | where: "lang-ref", entry.lang-ref | where: "lang", page.lang | first -%}
+		<li class="sidebar-nav-item"><a href="{{ current_page.url | relative_url }}">{{ current_page.title }}</a></li>
+		{% if entry.toc[0] %}
+		{% for entry2 in entry.toc %}
+		{%- assign current_page2 = site.pages | where: "lang-ref", entry2.lang-ref | where: "lang", page.lang | first -%}
+		<li class="sidebar-nav-item level2"><a href="{{ current_page2.url | relative_url }}">{{ current_page2.title }}</a></li>
+		{% endfor %}
+		{% endif %}
+		{% endfor %}
+	</ul>
+</nav>
+{% endif %}
