@@ -1,0 +1,36 @@
+// Mermaid Diagram Support
+// Styling for Mermaid diagrams embedded in content
+
+// Wrapper for diagram containers
+.diagram-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: $spacing-unit 0;
+  overflow-x: auto;
+
+  // Ensure diagrams scale on mobile
+  @include media-query($on-palm) {
+    margin: $spacing-unit / 2 0;
+  }
+}
+
+// Mermaid diagram styling
+.mermaid {
+  background-color: $white;
+  border: 1px solid $grey-color-light;
+  border-radius: 4px;
+  padding: $spacing-unit / 2;
+  margin: 0 auto;
+
+  // Responsive diagram width
+  @include media-query($on-palm) {
+    padding: $spacing-unit / 4;
+    font-size: 0.9rem;
+  }
+
+  // Ensure SVG inside diagram scales properly
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+}

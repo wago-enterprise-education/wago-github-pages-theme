@@ -88,6 +88,30 @@ Eine Warnung vor elektrostatischer Schädigung von Geräten
 {:.warning-esd}
 Eine Warnung vor elektrostatischer Schädigung von Geräten
 
+#### Mermaid Diagramme
+
+Zusätzlich können Diagramme mit [Mermaid](https://mermaid.js.org/) direkt in Markdown eingebettet werden. Dafür wird ein Fenced Code Block mit dem Sprach-Tag `mermaid` verwendet.
+
+Zum Beispiel führt
+
+````markdown
+```mermaid
+flowchart LR
+  A[Start] --> B{Entscheidung}
+  B -->|Ja| C[Weiter]
+  B -->|Nein| D[Abbruch]
+```
+````
+
+zu
+
+```mermaid
+flowchart LR
+  A[Start] --> B{Entscheidung}
+  B -->|Ja| C[Weiter]
+  B -->|Nein| D[Abbruch]
+```
+
 #### Math Blocks
 
 Kramdown ermöglicht das rendern von LaTeX Formeln, die mit Hilfe der Javascript Bibliothek [MathJax](https://www.mathjax.org/) gerendert werden.
