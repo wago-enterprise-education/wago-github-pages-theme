@@ -94,14 +94,14 @@ Zusätzlich können Diagramme mit [Mermaid](https://mermaid.js.org/) direkt in M
 
 Zum Beispiel führt
 
-```markdown
+````markdown
 ```mermaid
 flowchart LR
   A[Start] --> B{Entscheidung}
   B -->|Ja| C[Weiter]
   B -->|Nein| D[Abbruch]
 ```
-```
+````
 
 zu
 
